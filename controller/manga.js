@@ -25,11 +25,11 @@ class Manga {
       $("#ctl00_divCenter > div > div > div.items > div.row > div.item").each(
         (index, element) => {
           ls.push({
-            src: $(element)
+            thumbnail: $(element)
               .find("div.image > a > img")
               .attr("src")
               .split(process.env.NETTRUYEN_URL)[1],
-            thumbnail: $(element)
+            src: $(element)
               .find("div.image > a")
               .attr("href")
               .split(process.env.NETTRUYEN_URL)[1],
