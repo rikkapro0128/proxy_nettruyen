@@ -65,7 +65,7 @@ class Manga {
 
   async bio(req, res, next) {
     try {
-      const path = req.body.path;
+      const path = req.query.path;
 
       if (!path) {
         throw new Error("Path not found");
@@ -141,7 +141,7 @@ class Manga {
   async chapter(req, res, next) {
     try {
       const ls = [];
-      const path = req.body.path;
+      const path = req.query.path;
 
       if (!path) {
         throw new Error("Path not found");
